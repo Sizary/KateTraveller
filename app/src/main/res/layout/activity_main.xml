@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.katetraveller.MainActivity">
+
+
+
+        <!-- Main photo -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_photo2" />
+
+        <!-- Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <!-- WinterRose LOGO -->
+
+                <ImageView
+                    android:src="@drawable/winterrose2"
+                    android:id="@+id/imageView"
+                    style="@style/logo" />
+
+            </LinearLayout>
+
+            <!-- Markups at the bottom -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/semi_visible"
+                android:layout_weight="0">
+
+                <!-- Name -->
+
+                <LinearLayout
+                    style="@style/legend_layout"
+                    android:paddingTop="6dp"
+                    android:layout_gravity="bottom">
+
+                    <ImageView
+                        android:id="@+id/imageUser"
+                        app:srcCompat="@drawable/user2"
+                        style="@style/icon" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:text="@string/name"
+                        style="@style/legend_text" />
+                </LinearLayout>
+
+                <!-- Localization-->
+
+                <LinearLayout
+                    style="@style/legend_layout">
+
+                    <ImageView
+                        android:id="@+id/imageLocation"
+                        style="@style/icon"
+                        app:srcCompat="@drawable/location2" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        style="@style/legend_text"
+                        android:onClick="localization"
+                        android:text="@string/Wroclaw" />
+                </LinearLayout>
+
+                <!-- gmail -->
+
+                <LinearLayout
+                    style="@style/legend_layout">
+
+                    <ImageView
+                        android:id="@+id/imageMail"
+                        style="@style/icon"
+                        app:srcCompat="@drawable/mail2" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        style="@style/legend_text"
+                        android:autoLink="email"
+                        android:text="@string/gmail" />
+                </LinearLayout>
+
+                <!-- Wordpress -->
+
+                <LinearLayout
+                    style="@style/legend_layout"
+                    android:paddingBottom="6dp">
+
+                    <ImageView
+                        android:id="@+id/imageWpress"
+                        style="@style/icon"
+                        app:srcCompat="@drawable/wordpress2" />
+
+                    <!-- Here you can find how to make tex clickable -->
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/legend_text"
+                        android:autoLink="web"
+                        android:clickable="true"
+                        android:text="@string/www" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+</RelativeLayout>
